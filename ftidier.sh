@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "CTF ismi ?"
+echo "Name of CTF File"
 read fileName
 
 build_fs(){
@@ -35,31 +35,31 @@ check_int(){
 mainDir=$HOME/Desktop/$fileName
 if [ -e $mainDir ]
 then
- echo "Bu dosya ismi bu dizinde zaten var"
+ echo "This Filename is already exist on your DESKTOP"
 else
  mkdir  $mainDir
  cd $mainDir
- echo "Forensic icin dosya ihtiyaciniz  = ?"
+ echo "How many files for FORENSIC field = ?"
  read forNumber
  check_int $forNumber
  forFile="Forensic"
  
- echo "Reverse icin dosya ihtiyaciniz = ?"
+ echo "How many files for REVERSE field = ?"
  read  revNumber
  check_int $revNumber
  revFile="Reverse"
  
- echo "Web icin dosya ihtiyaciniz = ?"
+ echo "How many files for WEB field = ?"
  read webNumber
  check_int $webNumber
  webNumber="Web"
  
- echo "Mobil icin dosya ihtiyaciniz = ?"
+ echo "How many files for MOBILE field = ?"
  read mobNumber
  check_int $mobNumber
  mobFile="Mobile"
  
- echo "Cyber Int icin dosya ihtiyaciniz = ?"
+ echo "How many files for CINT field = ?"
  read cybNumber
  check_int $cybNumber
  cybFile="Intelligence"
